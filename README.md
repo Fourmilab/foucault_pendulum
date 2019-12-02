@@ -4,6 +4,8 @@
 is a realistic model of a Foucault pendulum for the
 [Second Life](https://en.wikipedia.org/wiki/Second_Life) virtual world.
 
+![Fourmilab Foucault Pendulum](marketplace/images/pendulum_2.png)
+
 In February, 1851 Léon Foucault invited people to the Paris
 Observatory "to observe the rotation of the Earth", then, a few
 weeks later, installed a much larger apparatus in Paris's
