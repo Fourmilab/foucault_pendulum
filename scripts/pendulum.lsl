@@ -569,7 +569,7 @@
                 
             } else if (param == "gravity") {        // gravity: acceleration m/sec^2
                 if (svalue == "earth") {
-                    siderealDay = GEE_EARTH;
+                    gravity = GEE_EARTH;
                 } else {
                     gravity = value;
                 }

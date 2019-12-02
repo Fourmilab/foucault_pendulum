@@ -80,3 +80,6 @@ Pushed the production directory to the repository with:
 
 Confirmed that my local "git sync" command works with the remote
 repository.
+
+The "set gravity earth" command actually reset the length of the
+sidereal day instead of the gravitatinal acceleration.  Fixed.
