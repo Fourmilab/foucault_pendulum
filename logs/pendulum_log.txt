@@ -82,4 +82,6 @@ Confirmed that my local "git sync" command works with the remote
 repository.
 
 The "set gravity earth" command actually reset the length of the
-sidereal day instead of the gravitatinal acceleration.  Fixed.
+sidereal day instead of the gravitational acceleration.  Fixed.
+
+Added script memory usage to the "stat" command.
