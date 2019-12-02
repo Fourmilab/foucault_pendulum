@@ -260,7 +260,7 @@ Both of these notecards are fully modifiable so you can customise them
 as you wish.
 
 LICENSE
-======
+=====
 
 This product (software, documents, images, and models) is
 licensed under a Creative Commons Attribution-ShareAlike 4.0
