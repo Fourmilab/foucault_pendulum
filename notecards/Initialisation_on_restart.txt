@@ -1,0 +1,5 @@
+#
+#    Initialisation on restart
+#
+time wall
+time on

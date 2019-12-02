@@ -1,0 +1,82 @@
+
+                       Foucault Pendulum
+                       Development Log
+                   by John Walker (Fourmilab)
+                    http://www.fourmilab.ch/
+
+2019 July 6
+
+With the original period of intense development completed,
+started this development log of incremental changes.
+
+Created a master instance to prepare for distribution in the
+Marketplace.  Set its name to "Foucault Pendulum v1.0".
+
+Added a new "set shiny" command to set the shininess of the bob
+and pivot.  Shininess is a value between 0 and 3 with 0
+indicating a matte surface and 3 maximum shininess, like
+polished metal.  Note: shininess values greater than 0 may
+result in the bob and pivot not being displayed in some viewers
+if "Advanced Lighting Model" is not enabled.
+
+2019 August 20
+
+Version 1.0 released in the Marketplace.
+
+2019 December 2
+
+Began development of version v1.1, incorporating clean-ups and
+lessons learned subsequent to the initial release.
+
+Replaced explicit degree signs in the script with references to
+U_deg, defined via llUnescapeURL().  This allows keeping the
+script in pure US-ASCII, avoiding confusion between ASCII,
+ISO-8859-1, and UTF-8.
+
+Removed unused variables associated with a dialogue since we
+don't have one.
+
+Added the ability to specify Earth gravity with "set gravity
+earth" as you can do for "sidereal" and "solar"/
+
+Added "shiny" to the list of set variables displayed when the
+user enters an invalid one.
+
+Renamed a local variable in the pendulumPeriod() function to
+avoid (harmless) confusion with a global variable with the same
+name.
+
+Commented out the "test" command.  Since it's only useful for
+those who edit the script, they can easily turn it back on when
+required.
+
+Added a llResetScript() to the on_rez event to insure that the
+model is initialised to all default settings when instantiated
+from the inventory.
+
+Created local development Git repository in:
+    ~/w/SecondLife/FoucaultPendulum/git
+with:
+    git init
+
+Added and committed:
+    Special files (README.md, etc.)
+    Notecards (User Guide / Help file, initialisation commands)
+    Marketplace (listing text, images)
+    Scripts
+    Logs (this file)
+
+Logged on to github.com.
+
+Created a new repository:
+    foucault_pendulum
+with access URLs:
+    HTTPS: https://github.com/Fourmilab/foucault_pendulum.git
+    SSH:   git@github.com:Fourmilab/foucault_pendulum.git
+
+Pushed the production directory to the repository with:
+    git remote add origin git@github.com:Fourmilab/foucault_pendulum.git
+    git push -u origin master
+
+Confirmed that my local "git sync" command works with the remote
+repository.

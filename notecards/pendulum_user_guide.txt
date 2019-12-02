@@ -1,0 +1,280 @@
+
+                       Foucault Pendulum
+                   by John Walker (Fourmilab)
+                    http://www.fourmilab.ch/
+
+In February, 1851 Léon Foucault invited people to the Paris
+Observatory "to observe the rotation of the Earth", then, a few
+weeks later, installed a much larger apparatus in Paris's
+Panthéon.  The apparatus Foucault invented to directly show the
+Earth's rotation, now called a Foucault pendulum, took advantage
+of a unique property of a swinging pendulum: the plane in which
+the pendulum bob swings (unless perturbed by outside forces such
+as wind or friction) remains fixed with respect to the distant
+stars.  As the Earth rotates, the plane in which the pendulum
+swings will appear to rotate, or precess, through time.  The
+rate of precession depends upon the latitude at which the
+pendulum is installed: at the north or south pole, it would make
+one revolution per sidereal day (the time it takes the distant
+stars to return to the same position in the sky as the day
+before).  At the latitude of Paris, Foucault's pendulum
+precessed around 11.3° per hour.  (The precession rate goes as
+the sine of the latitude.)
+
+Fourmilab's Foucault Pendulum brings this demonstration into
+Second Life.  You can install the pendulum wherever you wish to
+lend a bit of the nineteenth century discovery of science to
+your decor.  The pendulum is highly configurable, and can be
+customised to your preferences via chat commands.  In addition,
+the model, script, and all associated materials are delivered
+with full permissions so you can modify them as you like or use
+them as the foundation for your own projects.
+
+GETTING STARTED
+============
+
+The pendulum is delivered as a ready-to-use object; there is no
+need to unpack a box.  After receiving the Fourmilab Foucault
+Pendulum object, simply rez it in-world in some location where
+you're permitted to do that (your own property or a public
+sandbox).  The pendulum initially comes with a string five
+metres long between the pivot and the bob.  When the pendulum
+starts, it begins to listen on nearby chat on channel 1851 (the
+year Foucault first demonstrated his pendulum).  Typing:
+
+    /1851 help
+
+in nearby chat will deliver this document to you.
+
+Touch anywhere on the pendulum and it will begin to swing back
+and forth.  The period of its swing depends upon the length of
+the string (we'll see later how to adjust that).  You'll notice
+a blue bar below the bob (if you don't see it, edit the pendulum
+and move it up until the bar appears).  This is called the
+"Plane Indicator" and shows the plane in which the pendulum is
+swinging. This will appear to slowly rotate, or "precess", as
+the Earth rotates.  By default, the pendulum is configured for a
+latitude of 45 degrees North, but you can set this as you wish.
+Three grey hemispherical markers appear near one end of the
+Plane Indicator; these show the hourly precession of the plane,
+as the previous hour, next hour, and hour after that.  As the
+pendulum continues to swing, the plane indicator will slowly
+move from the previous hour to the next and, upon reaching it,
+the hour indicators will "walk" one hour around the circle the
+Plane Indicator is slowly tracing out.  The current time in
+Second Life Time (PST/PDT) appears as floating text above the
+pendulum, and the hours marked by the hour indicators appears
+above them.
+
+Of course you can sit on the pendulum bob and ride it!
+
+CONTROLLING AND CONFIGURING
+======================
+
+The main means of controlling the configuring the experiment is
+via messages sent in nearby chat on its control channel (1851 by
+default, but see the "channel" command below to change it if you
+wish).  To send a command, type a slash, the channel number, and
+the command and any parameters in the local chat box, for
+example:
+
+    /1851 set latitude 33
+
+which would set the latitude of the pendulum to 33 degrees
+north.
+
+The following commands are available.
+
+    access who
+        Set which classes of users can send commands via chat.
+        The who parameter should be one of public (anybody),
+        group (members of the group to which the pendulum
+        belongs), or owner (owner of the pendulum only).  The
+        owner is always able to send commands regardless of this
+        setting.
+
+    channel n
+        Change the chat channel on which the pendulum listens
+        for commands to n.  The new channel is echoed in chat to
+        confirm the change.  Default 1851.
+
+    help
+        Give this document to the requester.
+
+    reset
+        Reset the experiment to its initial state.  Note that
+        this does not change persistent configuration settings
+        such as latitude, gravity, and swing angle.
+
+    restart
+        Perform a hard restart, equivalent to creating a new
+        copy of the experiment.  The only setting which persists
+        across a restart is the string length.
+
+    set variable args
+        Set the named variable to the given argument(s).  The
+        following variables may be set.
+
+        amplitude angle
+            The amplitude of the pendulum's swing is set to the
+            angle in degrees.  Note that this is the excursion
+            from vertical in both directions on each swing, or
+            half the total angle subtended by the swing.  For
+            amplitudes greater than 10 degrees, simulation of
+            the pendulum's motion will be imprecise.  Default 8
+            degrees.
+
+        animation time
+            The time step for animation is set to time, given in
+            seconds with a decimal fraction.  Setting time too
+            large will result in jerky motion, while too large
+            will slow things down and create lag due to script
+            overhead. Default 0.1 seconds.
+
+        gravity accel
+            Set the gravitational acceleration fo the specified
+            value in metres/second^2.  Default is 9.80665, the
+            standard value at Earth's surface, which you can reset
+            with an accel setting of "earth".
+
+        latitude degrees
+            The latitude at which the pendulum is installed is
+            specified in degrees, positive for north and
+            negative for south.  Default 45.
+
+        length l
+            The length of the string from the pivot to the bob
+            is set to l, in metres.  This adjusts the position
+            of the bob and other objects accordingly and you may
+            have to reposition the pendulum afterward to keep it
+            from running into the ground or other objects.  This
+            setting persists even across a restart command.
+            Default 5 metres.
+
+        precession time
+            The precession of the plane of the pendulum's swing
+            will be update every time seconds.  Since the
+            precession changes slowly, there is no need to
+            update this more than once a minute.  Default 60
+            seconds.
+
+        shiny value
+            The shininess (specular reflection coefficient) of the bob
+            and pivot are set to the specified value, between 0 and 3.
+            A value of 0 is a completely matte surface, while 3 is the
+            maximum shininess, like polished metal.  Warning: setting
+            shininess greater than 0 may result in the bob and pivot
+            not displaying in some viewers if the "Advanced Lighting
+            Model" is not selected.  Default 0 (matte).
+
+        sidereal time
+            Set the length of the sidereal day to time seconds.
+            The sidereal day is the time it takes for distant
+            stars to return to the same position as the day
+            before.  The only reason to change this is to
+            simulate the pendulum's being on another planet.
+            Default 86164.0905 seconds, which you can reset
+            with a time of "earth".
+
+        solar time
+            Set the length of the mean solar day (time between
+            successive local noons).  Change this to simulate
+            other planets.  Default 86400 seconds, which you can
+            reset with a time of "earth".
+
+    start
+        Start the simulation (pendulum swinging and precession).
+
+    stat
+        Print a variety of statistics.  Some of the statistics
+        may not make sense unless the simulation has been
+        started at least once.
+
+    stop
+        Stop the simulation.  You can restart the simulation
+        from that point with a subsequent start command.
+
+    test n
+        Perform built-in test n.  This permits running
+        experimental code when developing the simulation
+        script.  Look in the source code of the script to see
+        which tests are currently included.
+
+    time cmd
+        Perform a variety of commands cmd relating to time.
+
+        on
+            Show the current time and hours for the hour
+            indicators.
+
+        off
+            Hide the current time and hours for hour indicators.
+
+        utc
+            Show time in co-ordinated universal (Greenwich mean)
+            time.
+
+        wall
+            Show time in Second Life (PST/PDT) time.  This is
+            the time shown in the title bar of many Second Life
+            viewers.
+
+        zone offset
+            Show time in local time with a specified offset from
+            universal (UTC) time.  The offset is positive if the
+            local time is later than UTC and negative if
+            earlier.  The offset may be a decimal number to
+            accommodate time zones which are not an even hour
+            offset from UTC.
+
+    trace what on/off
+        Enable or disable tracing of various parts of the
+        simulation.
+
+        hours
+            Adjustment of hour markers
+
+        period
+            Measure actual period of pendulum swing for
+            comparison with computed period.
+
+        precession
+            Computation and updating of precession and the Plane
+            Indicator
+
+        swing
+            Swing of the pendulum
+
+Configuration Notecards
+-----------------------------
+
+When the simulation is installed or restarted, if a notecard is present
+in its inventory named "Initialisation on restart", commands will be
+read from it, line by line, and processed before the simulation starts.
+Blank lines and those beginning with an octothorpe ("#") are ignored.
+
+Similarly, when the simulation is reset, commands from a "Reset commands"
+notecard, if any, will be processed.
+
+Both of these notecards are fully modifiable so you can customise them
+as you wish.
+
+LICENSE
+======
+
+This product (software, documents, images, and models) is
+licensed under a Creative Commons Attribution-ShareAlike 4.0
+International License.
+    http://creativecommons.org/licenses/by-sa/4.0/
+    https://creativecommons.org/licenses/by-sa/4.0/legalcode
+You are free to copy and redistribute this material in any
+medium or format, and to remix, transform, and build upon the
+material for any purpose, including commercially.  You must give
+credit, provide a link to the license, and indicate if changes
+were made.  If you remix, transform, or build upon this
+material, you must distribute your contributions under the same
+license as the original.
+
+Source code for this project is maintained on and available from the
+GitHub repository:
+    https://github.com/Fourmilab/foucault_pendulum

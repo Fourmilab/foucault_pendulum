@@ -1,0 +1,14 @@
+This is a faithful simulation of a Foucault pendulum, which demonstrates the rotation of the Earth.  The pendulum swings in a plane fixed with respect to the distant stars and, as the Earth rotates beneath it, the apparent plane of rotation precesses.  You can set the simulated latitude of the installation of the pendulum, the length of the string, and many other parameters via commands in nearby chat.  Time can be reckoned in Universal Time, Second Life Time, or any time zone you wish, specified by an offset from Universal Time.
+
+There is no box to  unpack: simply rez the pendulum, adjust the string length and position, configure as you wish, and you're ready to go.
+
+Source code for this project is maintained on and available from the GitHub repository:
+    https://github.com/Fourmilab/foucault_pendulum
+
+License
+----------
+
+This product (software, documents, images, and models) is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+    http://creativecommons.org/licenses/by-sa/4.0/
+    https://creativecommons.org/licenses/by-sa/4.0/legalcode
+You are free to copy and redistribute this material in any medium or format, and to remix, transform, and build upon the material for any purpose, including commercially. You must give credit, provide a link to the license, and indicate if changes were made. If you remix, transform, or build upon this material, you must distribute your contributions under the same license as the original.

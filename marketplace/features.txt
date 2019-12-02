@@ -1,0 +1,5 @@
+Foucault pendulum science simulation
+
+Can be scaled and configured for installation anywhere
+
+Full permissions; script may be modified as you wish
