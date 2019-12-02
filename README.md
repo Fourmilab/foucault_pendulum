@@ -40,7 +40,7 @@ components are installed within it.  (The model is very simple: just
 eight "prims" linked together into one object.)
 
 The
-[complete model](https://marketplace.secondlife.com/p/Fourmilab-Earth-and-Moon/18452910)
+[complete model](https://marketplace.secondlife.com/p/Fourmilab-Foucault-Pendulum/17866284)
 is available for free in the Second Life Marketplace.  This repository
 contains everything in the model (except the prims, which are objects
 built within Second Life), plus additional resources for developers who
